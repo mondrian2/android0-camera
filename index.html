@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Camera Access</title>
+    <script type="text/javascript">
+      function takePicture() {
+        if (typeof Android !== "undefined" && Android.takePicture) {
+          Android.takePicture()
+        } else {
+          alert("Camera interface not available")
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="takePicture()">Take Picture</button>
+  </body>
+</html>
